@@ -15,4 +15,4 @@ This project follows our [Code of Conduct](https://github.com/spicelang/vscode-s
 ## License
 The project is licensed under the [MIT software license](https://github.com/spicelang/vscode-spice/blob/main/LICENSE) and provided/distributed by ChilliBits.
 
-© ChilliBits 2021
+© ChilliBits 2021-2022

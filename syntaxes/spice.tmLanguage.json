@@ -37,7 +37,7 @@
 		},
 		{
 			"comment": "Built-in functions",
-			"match": "\\b(printf)\\b(?=\\()",
+			"match": "\\b(printf|sizeof)\\b(?=\\()",
 			"name": "support.function.builtin.spice"
 		},
 		{
@@ -292,6 +292,25 @@
 							"include": "$self"
 						}
 					]
+				},
+				{
+					"begin": "\\[",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.begin.bracket.square.spice"
+						}
+					},
+					"end": "\\]",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.end.bracket.square.spice"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
 				}
 			]
 		},
@@ -307,7 +326,7 @@
 					"name": "keyword.operator.increment.spice"
 				},
 				{
-					"match": "(==|!=|<=|>=|<(?!<)|>(?!>))",
+					"match": "(==|!=|<=|>=|<|>)",
 					"name": "keyword.operator.comparison.spice"
 				},
 				{
@@ -315,15 +334,15 @@
 					"name": "keyword.operator.logical.spice"
 				},
 				{
-					"match": "(=|\\+=|\\-=|\\*=|/=)",
+					"match": "(=|\\+=|\\-=|\\*=|/=|<<=|>>=)",
 					"name": "keyword.operator.assignment.spice"
 				},
 				{
-					"match": "(\\+|\\-|\\*|/)",
+					"match": "(\\+|\\-|\\*|/|\\%)",
 					"name": "keyword.operator.arithmetic.spice"
 				},
 				{
-					"match": "(&(?!\\^)|\\||\\^|&\\^|<<|>>)",
+					"match": "(&|\\||<<|>>)",
 					"name": "keyword.operator.arithmetic.bitwise.spice"
 				}
 			]
@@ -735,6 +754,10 @@
 					"name": "punctuation.other.semicolon.spice"
 				},
 				{
+					"match": ":",
+					"name": "punctuation.other.colon.spice"
+				},
+				{
 					"match": "\\.",
 					"name": "punctuation.other.period.spice"
 				}
@@ -744,12 +767,20 @@
 			"patterns": [
 				{
 					"comment": "Flow control keywords",
-					"match": "\\b(as|for|if|return|while)\\b",
+					"match": "\\b(as|for|foreach|if|else|return|while|break|continue)\\b",
 					"name": "keyword.control.spice"
 				},
 				{
 					"match": "\\bconst\\b",
 					"name": "keyword.const.spice"
+				},
+				{
+					"match": "\\btype\\b",
+					"name": "keyword.type.spice"
+				},
+				{
+					"match": "\\bext\\b",
+					"name": "keyword.ext.spice"
 				},
 				{
 					"match": "\\bf\\b",
@@ -772,28 +803,44 @@
 		"storage_types": {
 			"patterns": [
 				{
-					"match": "\\bbool\\b",
-					"name": "storage.type.boolean.spice"
-				},
-				{
 					"match": "\\bdouble\\b",
 					"name": "storage.type.double.spice"
-				},
-				{
-					"match": "\\bdyn\\b",
-					"name": "storage.type.dyn.spice"
 				},
 				{
 					"match": "\\bint\\b",
 					"name": "storage.type.int.spice"
 				},
 				{
+					"match": "\\bshort\\b",
+					"name": "storage.type.short.spice"
+				},
+				{
+					"match": "\\blong\\b",
+					"name": "storage.type.long.spice"
+				},
+				{
+					"match": "\\bbyte\\b",
+					"name": "storage.type.byte.spice"
+				},
+				{
+					"match": "\\bchar\\b",
+					"name": "storage.type.char.spice"
+				},
+				{
 					"match": "\\bstring\\b",
 					"name": "storage.type.string.spice"
 				},
 				{
+					"match": "\\bbool\\b",
+					"name": "storage.type.boolean.spice"
+				},
+				{
 					"match": "\\bstruct\\b",
 					"name": "storage.type.struct.spice"
+				},
+				{
+					"match": "\\bdyn\\b",
+					"name": "storage.type.dyn.spice"
 				}
 			]
 		}
