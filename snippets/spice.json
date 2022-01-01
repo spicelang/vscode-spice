@@ -10,6 +10,11 @@
             "body": "f<int> main() {\n\t$1\n}",
             "description": "Snippet for a main function"
         },
+        "main function with cli args": {
+            "prefix": "fmain",
+            "body": "f<int> main(int argc, string[] argv) {\n\t$1\n}",
+            "description": "Snippet for a main function with cli args"
+        },
         "function def": {
             "prefix": "func",
             "body": "f<$1> ${2:functionName}($3) {\n\t$4\n}",
@@ -29,10 +34,25 @@
             "body": "if ${1:condition} {\n\t$0\n}",
             "description": "Snippet for an if statement"
         },
+        "ifelse": {
+            "prefix": "if",
+            "body": "if ${1:condition} {\n\t$0\n} else {\n\t$1\n}",
+            "description": "Snippet for an if else statement"
+        },
         "for": {
             "prefix": "for",
             "body": "for ${1:int i = 0}; ${2:i < 10}; ${3:i++} {\n\t$4\n}",
             "description": "Snippet for a for loop"
+        },
+        "foreach": {
+            "prefix": "foreach",
+            "body": "foreach ${1:int item}: ${2:intArray} {\n\t$3\n}",
+            "description": "Snippet for a foreach loop"
+        },
+        "foreach indexed": {
+            "prefix": "foreach",
+            "body": "foreach ${1:int i}, ${2:int item}: ${3:intArray} {\n\t$4\n}",
+            "description": "Snippet for an indexed foreach loop"
         },
         "while": {
             "prefix": "while",
@@ -53,6 +73,11 @@
             "prefix": "pff",
             "body": "printf(\"${1}\", ${2:var});",
             "description": "Snippet for a prinf statement with a parameter"
+        },
+        "sizeof": {
+            "prefix": "so",
+            "body": "sizeof(\"${1}\");",
+            "description": "Snippet for a sizeof expression"
         },
         "hello world": {
             "prefix": "helloworld",
