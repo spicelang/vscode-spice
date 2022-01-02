@@ -31,6 +31,27 @@
 			]
 		},
 		{
+			"comment": "Char literals",
+			"begin": "'",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.char.begin.spice"
+				}
+			},
+			"end": "'",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.char.end.spice"
+				}
+			},
+			"name": "string.quoted.single.spice",
+			"patterns": [
+				{
+					"include": "#string_escaped_char"
+				}
+			]
+		},
+		{
 			"comment": "Syntax error numeric literals",
 			"match": "\\b0[0-7]*[89]\\d*\\b",
 			"name": "invalid.illegal.numeric.spice"
@@ -781,6 +802,10 @@
 				{
 					"match": "\\bext\\b",
 					"name": "keyword.ext.spice"
+				},
+				{
+					"match": "\\bdll\\b",
+					"name": "keyword.dll.spice"
 				},
 				{
 					"match": "\\bf\\b",
