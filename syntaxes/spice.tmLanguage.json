@@ -118,7 +118,7 @@
 		},
 		{
 			"comment": "Language constants",
-			"match": "\\b(true|false)\\b",
+			"match": "\\b(true|false|nil)\\b",
 			"name": "constant.language.spice"
 		},
 		{
