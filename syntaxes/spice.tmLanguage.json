@@ -203,6 +203,9 @@
 		},
 		{
 			"include": "#storage_types"
+		},
+		{
+			"include": "#storage_modifiers"
 		}
 	],
 	"repository": {
@@ -355,7 +358,7 @@
 					"name": "keyword.operator.logical.spice"
 				},
 				{
-					"match": "(=|\\+=|\\-=|\\*=|/=|<<=|>>=)",
+					"match": "(=|\\+=|\\-=|\\*=|/=|\\%=|&=|\\|=|\\^=|<<=|>>=)",
 					"name": "keyword.operator.assignment.spice"
 				},
 				{
@@ -363,7 +366,7 @@
 					"name": "keyword.operator.arithmetic.spice"
 				},
 				{
-					"match": "(&|\\||<<|>>)",
+					"match": "(&|\\||\\^|~|<<|>>)",
 					"name": "keyword.operator.arithmetic.bitwise.spice"
 				}
 			]
@@ -792,14 +795,6 @@
 					"name": "keyword.control.spice"
 				},
 				{
-					"match": "\\bconst\\b",
-					"name": "keyword.const.spice"
-				},
-				{
-					"match": "\\btype\\b",
-					"name": "keyword.type.spice"
-				},
-				{
 					"match": "\\bext\\b",
 					"name": "keyword.ext.spice"
 				},
@@ -820,8 +815,8 @@
 					"name": "keyword.type.spice"
 				},
 				{
-					"match": "\\bnew\\b",
-					"name": "keyword.new.spice"
+					"match": "\\bstruct\\b",
+					"name": "keyword.struct.spice"
 				}
 			]
 		},
@@ -860,12 +855,24 @@
 					"name": "storage.type.boolean.spice"
 				},
 				{
-					"match": "\\bstruct\\b",
-					"name": "storage.type.struct.spice"
-				},
-				{
 					"match": "\\bdyn\\b",
 					"name": "storage.type.dyn.spice"
+				}
+			]
+		},
+		"storage_modifiers": {
+			"patterns": [
+				{
+					"match": "\\bconst\\b",
+					"name": "storage.modifier.const.spice"
+				},
+				{
+					"match": "\\bsigned\\b",
+					"name": "storage.modifier.signed.spice"
+				},
+				{
+					"match": "\\bunsigned\\b",
+					"name": "storage.modifier.unsigned.spice"
 				}
 			]
 		}
