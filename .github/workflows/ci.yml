@@ -1,5 +1,5 @@
-# Workflow for Java CI debug build
-name: Java CI
+# Workflow for CI debug build
+name: CI
 
 on:
   push:
