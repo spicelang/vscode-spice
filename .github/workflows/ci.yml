@@ -35,5 +35,6 @@ jobs:
 
       - name: Install & Build
         run: |
-          npm install
+          npm i -g esbuild
+          npm i
           npm run compile
