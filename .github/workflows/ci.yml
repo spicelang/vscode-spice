@@ -1,0 +1,39 @@
+# Workflow for Java CI debug build
+name: Java CI
+
+on:
+  push:
+    paths-ignore:
+      - README.md
+      - SECURITY.md
+      - .git**
+  pull_request:
+    branches:
+      - main
+      - feature/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x, 17.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install & Build
+        run: |
+          npm install
+          npm run compile
