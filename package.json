@@ -47,7 +47,7 @@
             {
                 "language": "spice",
                 "scopeName": "source.spice",
-                "path": "./syntaxes/spice.tmLanguage.json"
+                "path": "./syntaxes/spice.tmLanguage.xml"
             }
         ],
         "snippets": [
