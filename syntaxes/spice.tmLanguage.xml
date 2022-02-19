@@ -132,7 +132,7 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(\b(f|p|type|struct|const|signed|unsigned)\b)</string>
+          <string>(\b(f|p|type|struct|const|signed|unsigned|inline|public)\b)</string>
           <key>name</key>
           <string>keyword.control.spice</string>
         </dict>
