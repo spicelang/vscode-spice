@@ -182,7 +182,7 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(=|!|&lt;&lt;=|&gt;&gt;=|&lt;&lt;|&gt;&gt;|&lt;=|&gt;=|\+=|-=|\*=|/=|&amp;&amp;|\|\||&amp;|\||\+\+|--|\%|==|!=|\.\.\.|\+|-|\*|/|&amp;)</string>
+          <string>(=|!|&lt;|&gt;|&lt;&lt;=|&gt;&gt;=|&lt;&lt;|&gt;&gt;|&lt;=|&gt;=|\+=|-=|\*=|/=|&amp;&amp;|\|\||&amp;|\||\+\+|--|\%|==|!=|\.\.\.|\+|-|\*|/|&amp;)</string>
           <key>name</key>
           <string>keyword.operator.spice</string>
         </dict>
