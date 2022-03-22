@@ -1,13 +1,28 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: /
-  schedule:
-    interval: daily
-    time: "04:00"
-  open-pull-requests-limit: 10
-  target-branch: main
-  reviewers:
-    - spicelang/vscode-extension-team
-  assignees:
-    - spicelang/vscode-extension-team
+  # NPM
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 15
+    target-branch: main
+    reviewers:
+      - spicelang/vscode-extension-team
+    assignees:
+      - spicelang/vscode-extension-team
+
+  # Github Actions
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+      time: "04:00"
+      timezone: Europe/Berlin
+    open-pull-requests-limit: 15
+    target-branch: main
+    reviewers:
+      - spicelang/vscode-extension-team
+    assignees:
+      - spicelang/vscode-extension-team
