@@ -132,13 +132,13 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(\b(f|p|type|struct|const|signed|unsigned|inline|public)\b)</string>
+          <string>(\b(f|p|type|struct|thread|const|signed|unsigned|inline|public)\b)</string>
           <key>name</key>
           <string>keyword.control.spice</string>
         </dict>
         <dict>
           <key>match</key>
-          <string>(\b(printf|sizeof|len)\b)</string>
+          <string>(\b(printf|sizeof|len|tid|join)\b)</string>
           <key>name</key>
           <string>support.function.spice</string>
         </dict>
