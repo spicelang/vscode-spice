@@ -27,11 +27,13 @@
         },
         "struct def": {
             "prefix": "struct",
-            "body": "type ${1:StructName} struct {\n\t$2\n}"
+            "body": "type ${1:StructName} struct {\n\t$2\n}",
+            "description": "Snippet for a struct"
         },
         "generic type def": {
             "prefix": "gen",
-            "body": "type ${1:TypeName} ${2:TypeAlts};"
+            "body": "type ${1:TypeName} ${2:TypeAlts};",
+            "description": "Snippet for a generic type definition"
         },
         "if": {
             "prefix": "if",
@@ -62,6 +64,16 @@
             "prefix": "while",
             "body": "while ${1:condition} {\n\t$0\n}",
             "description": "Snippet for a while loop"
+        },
+        "thread": {
+            "prefix": "thread",
+            "body": "thread {\n\t${1}\n}",
+            "description": "Snippet for an anomymous thread"
+        },
+        "thread with id": {
+            "prefix": "thid",
+            "body": "byte* ${1:name} = thread {\n\t${2}\n}",
+            "description": "Snippet for a thread"
         },
         "single constant": {
             "prefix": "co",
