@@ -29,6 +29,10 @@
             "prefix": "struct",
             "body": "type ${1:StructName} struct {\n\t$2\n}"
         },
+        "generic type def": {
+            "prefix": "gen",
+            "body": "type ${1:TypeName} ${2:TypeAlts};"
+        },
         "if": {
             "prefix": "if",
             "body": "if ${1:condition} {\n\t$0\n}",
