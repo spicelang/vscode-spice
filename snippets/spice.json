@@ -95,6 +95,16 @@
             "body": "sizeof(\"${1}\");",
             "description": "Snippet for a sizeof expression"
         },
+        "unsafe": {
+            "prefix": "us",
+            "body": "unsafe {\n\t${1}\n}",
+            "description": "Snippet for an unsafe block"
+        },
+        "assert": {
+            "prefix": "as",
+            "body": "assert ${1};",
+            "description": "Snippet for an assert statement"
+        },
         "hello world": {
             "prefix": "helloworld",
             "body": "f<int> main() {\n\tprintf(\"Hello World!\");\n}",
