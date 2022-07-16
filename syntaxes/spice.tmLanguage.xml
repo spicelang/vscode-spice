@@ -120,7 +120,7 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(\b(if|else|for|foreach|while|break|continue|return|ext)\b)</string>
+          <string>(\b(if|else|for|foreach|while|break|continue|return|ext|unsafe)\b)</string>
           <key>name</key>
           <string>keyword.spice</string>
         </dict>
@@ -138,7 +138,7 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(\b(printf|sizeof|len|tid|join)\b)</string>
+          <string>(\b(printf|sizeof|len|tid|join|assert)\b)</string>
           <key>name</key>
           <string>support.function.spice</string>
         </dict>
