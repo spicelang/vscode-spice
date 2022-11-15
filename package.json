@@ -72,7 +72,7 @@
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
     },
     "devDependencies": {
-        "@types/vscode": "^1.73.0",
+        "@types/vscode": "^1.73.1",
         "tslint": "^6.1.1",
         "typescript": "^4.8.4",
         "yarn": "^1.22.19"
