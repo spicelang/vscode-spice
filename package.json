@@ -74,7 +74,7 @@
     "devDependencies": {
         "@types/vscode": "^1.79.1",
         "tslint": "^6.1.1",
-        "typescript": "^5.1.5",
+        "typescript": "^5.1.6",
         "yarn": "^1.22.19"
     },
     "activationEvents": [
