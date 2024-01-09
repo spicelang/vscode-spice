@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-import vscode = require('vscode');
+import vscode = require("vscode");
 
 let diagnosticCollection: vscode.DiagnosticCollection;
 

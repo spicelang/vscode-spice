@@ -120,7 +120,7 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(\b(if|else|for|foreach|while|break|continue|return|ext|unsafe)\b)</string>
+          <string>(\b(if|else|switch|case|default|assert|for|foreach|do|while|break|continue|fallthrough|return|ext|unsafe)\b)</string>
           <key>name</key>
           <string>keyword.spice</string>
         </dict>
@@ -132,13 +132,13 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(\b(f|p|type|struct|thread|const|signed|unsigned|inline|public)\b)</string>
+          <string>(\b(f|p|type|struct|interface|enum|alias|operator|const|signed|unsigned|inline|public|heap|compose)\b)</string>
           <key>name</key>
           <string>keyword.control.spice</string>
         </dict>
         <dict>
           <key>match</key>
-          <string>(\b(printf|sizeof|len|tid|join|assert)\b)</string>
+          <string>(\b(printf|sizeof|alignof|len|panic)\b)</string>
           <key>name</key>
           <string>support.function.spice</string>
         </dict>
@@ -182,7 +182,7 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(=|!|&lt;|&gt;|&lt;&lt;=|&gt;&gt;=|&lt;&lt;|&gt;&gt;|&lt;=|&gt;=|\+=|-=|\*=|/=|&amp;&amp;|\|\||&amp;|\||\+\+|--|\%|==|!=|\.\.\.|\+|-|\*|/|&amp;)</string>
+          <string>(=|!|~|&lt;|&gt;|&lt;&lt;=|&gt;&gt;=|&lt;&lt;|&gt;&gt;|&lt;=|&gt;=|\+=|-=|\*=|/=|\%=|&amp;=|\|=|\^=|&amp;&amp;|\|\||&amp;|\||\^|\+\+|--|\%|==|!=|\.\.\.|\+|-|\*|/)</string>
           <key>name</key>
           <string>keyword.operator.spice</string>
         </dict>
@@ -204,7 +204,7 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(\.|,|;|\:|\?)</string>
+          <string>(\.|,|;|\:|\?|-&gt;|#|#!)</string>
           <key>name</key>
           <string>punctuation.spice</string>
         </dict>
