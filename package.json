@@ -2,7 +2,7 @@
     "name": "spicelang",
     "displayName": "Spice",
     "description": "Spice language extension",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "chillibits",
     "author": {
         "name": "Marc Auberer <marc.auberer@chillibits.com>"
