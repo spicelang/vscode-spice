@@ -30,6 +30,11 @@
             "body": "type ${1:StructName} struct {\n\t$2\n}",
             "description": "Snippet for a struct"
         },
+        "interface def": {
+            "prefix": "interface",
+            "body": "type ${1:InterfaceName} interface {\n\t$2\n}",
+            "description": "Snippet for an interface"
+        },
         "generic type def": {
             "prefix": "gen",
             "body": "type ${1:TypeName} ${2:TypeAlts};",
@@ -60,20 +65,15 @@
             "body": "foreach ${1:int i}, ${2:int item}: ${3:intArray} {\n\t$4\n}",
             "description": "Snippet for an indexed foreach loop"
         },
+        "do": {
+            "prefix": "do",
+            "body": "do {\n\t$0\n} while ${1:condition};",
+            "description": "Snippet for a do-while loop"
+        },
         "while": {
             "prefix": "while",
             "body": "while ${1:condition} {\n\t$0\n}",
             "description": "Snippet for a while loop"
-        },
-        "thread": {
-            "prefix": "thread",
-            "body": "thread {\n\t${1}\n}",
-            "description": "Snippet for an anomymous thread"
-        },
-        "thread with id": {
-            "prefix": "thid",
-            "body": "byte* ${1:name} = thread {\n\t${2}\n}",
-            "description": "Snippet for a thread"
         },
         "single constant": {
             "prefix": "co",
@@ -94,6 +94,11 @@
             "prefix": "so",
             "body": "sizeof(\"${1}\");",
             "description": "Snippet for a sizeof expression"
+        },
+        "alignof": {
+            "prefix": "ao",
+            "body": "alignof(\"${1}\");",
+            "description": "Snippet for a alignof expression"
         },
         "unsafe": {
             "prefix": "us",
