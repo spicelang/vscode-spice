@@ -75,7 +75,7 @@
         "@types/vscode": "^1.87.0",
         "tslint": "^6.1.1",
         "typescript": "^5.4.2",
-        "yarn": "^1.22.21"
+        "yarn": "^1.22.22"
     },
     "activationEvents": [
         "workspaceContains:**/*.spice"
