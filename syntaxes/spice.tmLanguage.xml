@@ -138,7 +138,7 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>(\b(printf|sizeof|alignof|len|panic)\b)</string>
+          <string>(\b(printf|sizeof|alignof|len|panic|syscall)\b)</string>
           <key>name</key>
           <string>support.function.spice</string>
         </dict>
