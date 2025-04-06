@@ -100,6 +100,11 @@
             "body": "alignof(\"${1}\");",
             "description": "Snippet for a alignof expression"
         },
+        "typeid": {
+            "prefix": "ti",
+            "body": "typeid(\"${1}\");",
+            "description": "Snippet for a typeid expression"
+        },
         "unsafe": {
             "prefix": "us",
             "body": "unsafe {\n\t${1}\n}",
