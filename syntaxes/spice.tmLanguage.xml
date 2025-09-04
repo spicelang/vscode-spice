@@ -95,6 +95,12 @@
           <string>comment.spice</string>
         </dict>
         <dict>
+          <key>match</key>
+          <string>^\s*\*.*$</string>
+          <key>name</key>
+          <string>comment.spice</string>
+        </dict>
+        <dict>
           <key>begin</key>
           <string>(/\*)</string>
           <key>beginCaptures</key>
