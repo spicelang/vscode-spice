@@ -11,7 +11,7 @@ updates:
     reviewers:
       - spicelang/vscode-extension-team
     assignees:
-      - spicelang/vscode-extension-team
+      - marcauberer
 
   # Github Actions
   - package-ecosystem: github-actions
@@ -25,4 +25,4 @@ updates:
     reviewers:
       - spicelang/vscode-extension-team
     assignees:
-      - spicelang/vscode-extension-team
+      - marcauberer
