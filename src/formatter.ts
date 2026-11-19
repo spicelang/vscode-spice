@@ -22,7 +22,7 @@ export class SpiceFormattingProvider implements vscode.DocumentFormattingEditPro
     token: vscode.CancellationToken
   ): Promise<vscode.TextEdit[]> {
     const sourceCode = document.getText();
-    const compilerPath = getCompilerPath();
+    const compilerPath = getCompilerPath(document.uri);
     const workingDir = document.uri.scheme === "file" ? path.dirname(document.uri.fsPath) : undefined;
 
     let formattedCode: string;
@@ -70,10 +70,14 @@ class CompilerNotFoundError extends Error {}
 /**
  * Get the path of the Spice compiler from the settings
  *
+ * @param uri URI of the document to format. Needed to honor the settings of its folder in multi-root workspaces
  * @returns Path of the compiler executable
  */
-function getCompilerPath(): string {
-  const configuredPath = vscode.workspace.getConfiguration("spice").get<string>("compilerPath", DEFAULT_COMPILER_PATH).trim();
+function getCompilerPath(uri: vscode.Uri): string {
+  const configuredPath = vscode.workspace
+    .getConfiguration("spice", uri)
+    .get<string>("compilerPath", DEFAULT_COMPILER_PATH)
+    .trim();
   return configuredPath.length > 0 ? configuredPath : DEFAULT_COMPILER_PATH;
 }
 
