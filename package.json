@@ -12,7 +12,8 @@
     "categories": [
         "Programming Languages",
         "Snippets",
-        "Linters"
+        "Linters",
+        "Formatters"
     ],
     "galleryBanner": {
         "color": "#F2F2F2",
@@ -55,7 +56,18 @@
                 "language": "spice",
                 "path": "./snippets/spice.json"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "Spice",
+            "properties": {
+                "spice.compilerPath": {
+                    "type": "string",
+                    "default": "spice",
+                    "scope": "machine-overridable",
+                    "markdownDescription": "Path to the Spice compiler executable. The extension formats Spice files with `spice format`, so the compiler has to be a version, that provides the `format` subcommand. Defaults to `spice` from the `PATH`."
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
