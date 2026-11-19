@@ -19,6 +19,23 @@ This VS Code Spice extension provides language support for the [Spice programmin
 - Syntax highlighting
 - Syntax error detection
 - Snippet support
+- Formatting with the formatter of the Spice compiler (`spice format`)
+
+## Formatting
+The extension formats Spice files with the "Format Document" command (<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>F</kbd>) by
+running `spice format -`. To format on save, enable it for Spice files in your `settings.json`:
+
+```json
+"[spice]": {
+    "editor.formatOnSave": true
+}
+```
+
+The formatter needs a Spice compiler, that provides the `format` subcommand. If it is not on your `PATH`, set the path to it:
+
+| Setting              | Default | Description                           |
+|----------------------|---------|---------------------------------------|
+| `spice.compilerPath` | `spice` | Path to the Spice compiler executable |
 
 ## Contribute to the project
 If you want to contribute to this project, please ensure you comply with the [contribution guidelines](https://github.com/spicelang/vscode-spice/blob/main/CONTRIBUTING.md).

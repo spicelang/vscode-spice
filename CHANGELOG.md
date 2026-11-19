@@ -6,3 +6,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - Initial release
+- Format Spice files with the formatter of the Spice compiler (`spice format`). Configure the compiler path with `spice.compilerPath`

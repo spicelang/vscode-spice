@@ -1,10 +1,15 @@
 "use strict";
 
 import vscode = require("vscode");
+import { registerFormatter } from "./formatter";
 
 let diagnosticCollection: vscode.DiagnosticCollection;
 
 export function activate(ctx: vscode.ExtensionContext): void {
+  const outputChannel = vscode.window.createOutputChannel("Spice");
+  ctx.subscriptions.push(outputChannel);
+  ctx.subscriptions.push(registerFormatter(outputChannel));
+
   /*ctx.subscriptions.push(getDisposable());
   diagnosticCollection = vscode.languages.createDiagnosticCollection('go');
   ctx.subscriptions.push(diagnosticCollection);*/
